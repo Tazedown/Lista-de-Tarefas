@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="Index.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Lista de Tarefas
+        </h1>
+    </header>
+    <section>
+        <ul>
+            <li>Estudar Html</li>
+            <li>Estudar CSS</li>
+            <li>Estudar Java Script</li>
+        </ul>
+        <br>
+        <input>
+        <button onclick="Add()">Adicionar</button>
+    </section>
+    <script>
+        function Add(){
+        const ul = document.querySelector("ul")
+        const input = document.querySelector("input")
+        const tarefa = input.value
+        const li = document.createElement("li")
+        ul.appendChild(li)
+        li.innerText = tarefa
+        input.value = ''
+
+        }
+    </script>
+
+
+
+
+
+
+
+
+</body>
+</html>
